@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f0f0;
+    /* Soft pastel cream */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+h1 {
+    color: #5D5F71;
+    /* Soft charcoal */
+    margin: 20px 0;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Video Container */
+.video-container {
+    border: 4px solid #F3D0D7;
+    /* Pastel blue */
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #F6F5F2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#video-feed {
+    width: 400px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Text Output */
+.text-output {
+    background: #FDFDFD;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 400px;
+}
+
+h2 {
+    color: #5D5F71;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.2em;
+    color: #d28695;
+    /* Pastel teal */
+    font-weight: bold;
+    background: #E6F4F1;
+    /* Soft pastel mint */
+    padding: 6px;
+    border-radius: 6px;
+}
+
+/* Buttons */
+button {
+    background: #F3D0D7;
+    /* Pastel blue */
+    color: #354A54;
+    font-size: 1em;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+button:hover {
+    background: #7FB3D5;
+    /* Lighter pastel blue */
+}
+
+/* Word Suggestions */
+.suggestion-btn {
+    background: #9DD6C3;
+    /* Soft pastel green */
+    font-size: 0.9em;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.suggestion-btn:hover {
+    background: #7DBCA8;
+    /* Slightly darker pastel green */
+}
+
+/* Sentence Box */
+#sentence-text {
+    background: #9DD6C3;
+    /* Soft peach */
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #6B4E5B;
+}
+
+/* Buttons Section */
+button#predict-btn {
+    background: #F3D0D7;
+    /* Pastel orange */
+}
+
+button#predict-btn:hover {
+    background: #7FB3D5;
+}
+
+button#clear-btn {
+    background: #F3D0D7;
+    /* Pastel red */
+}
+
+button#clear-btn:hover {
+    background: #7FB3D5;
+}
+
+button#speak-btn {
+    background: #D5A3FF;
+    /* Pastel purple */
+}
+
+button#speak-btn:hover {
+    background: #C28BF7;
+}
+
+/* Style the dropdown like buttons */
+#language-select {
+    background: #A2D5F2;
+    /* Pastel blue */
+    color: #354A54;
+    font-size: 1em;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+    outline: none;
+}
+
+/* Hover effect like buttons */
+#language-select:hover {
+    background: #7FB3D5;
+    /* Lighter pastel blue */
+}
+
+/* Make the dropdown arrow match the style */
+#language-select::-ms-expand {
+    display: none;
+    /* Hide default arrow in IE */
+}
+
+#language-select {
+    appearance: none;
+    /* Remove default dropdown style */
+    -webkit-appearance: none;
+    /* For Safari */
+    -moz-appearance: none;
+    /* For Firefox */
+}
+
+/* Wrap dropdown in a div to align with buttons */
+.select-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    /* Custom dropdown arrow */
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #354A54;
+}

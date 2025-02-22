@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language To Text Conversion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1>Sign Language to Text Conversion</h1>
+    <div class="container">
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" id="video-feed">
+        </div>
+        
+        <div class="text-output">
+            <h2>Recognized Character:</h2>
+            <p id="character">_</p>
+
+            <h2>Predicted Word:</h2>
+            <p id="predicted-word">_</p> <!-- Added ID to correctly update predicted word -->
+
+            <h2>Sentence:</h2>
+            <p id="sentence-text"></p>
+
+            
+            <button id="predict-btn">🎯 Start Prediction</button>
+
+            <!-- Language Dropdown -->
+            <div class="select-wrapper">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                </select>
+            </div>
+            
+
+            <!-- Buttons -->
+
+            <button onclick="speakSentence()">🔊 Speak Sentence</button>
+            <button id="clear-btn">🗑 Clear</button>
+            <button id="add-word-btn">➕ Add Word to Sentence</button>
+
+            <h2>Word Suggestions:</h2>
+            <button class="suggestion-btn" id="suggestion1"></button>
+            <button class="suggestion-btn" id="suggestion2"></button>
+            <button class="suggestion-btn" id="suggestion3"></button>
+        </div>
+    </div>
+</body>
+</html>
